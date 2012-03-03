@@ -1,0 +1,15 @@
+body {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer, article {
+	display: block;
+}
+
+footer {
+	text-align: center;
+	font-size: x-small;
+}
+
