@@ -14,7 +14,6 @@ function release() {
 
 }
 
-/*
 function addPerson($p) {
 	$ret = 0;
 	testAndSet();
@@ -27,6 +26,7 @@ function addPerson($p) {
 	echo $ret;
 	return $ret;
 }
+/*
 
 function removePerson($p) {
 	testAndSet();
