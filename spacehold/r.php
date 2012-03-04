@@ -59,6 +59,8 @@ if (isset($_GET["addPerson"])) {
 } else if (isset($_GET("getPeople"))) {
 	echo "getPeople";
 	getPeople();
+} else {
+	echo "no argument or invalid argument specified!";
 }
 ?>
 
