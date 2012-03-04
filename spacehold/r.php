@@ -1,9 +1,11 @@
-<?
+<?php
 /**
  * The request page.
  *
  * We need to deal with locking somehow.
  */
+
+echo "hello";
 
 function testAndSet() {
 
@@ -44,7 +46,7 @@ function removePerson($p) {
 	return $ret;
 }
 
-function getPeople() {
+function getKeyholders() {
 	$s = file_get_contents("miters.txt");
 	echo $s;
 	return $s;
@@ -56,9 +58,9 @@ if (isset($_GET["addPerson"])) {
 } else if (isset($_GET("leave"))) {
 	echo "leave";
 	removePerson($_GET("leave"));
-} else if (isset($_GET("getPeople"))) {
-	echo "getPeople";
-	getPeople();
+} else if (isset($_GET("getKeyholders"))) {
+	echo "getKeyholders";
+	getKeyholders();
 } else {
 	echo "no argument or invalid argument specified!";
 }
