@@ -18,7 +18,18 @@ function addPerson($p) {
 	$ret = 0;
 	testAndSet();
 	$s = file_get_contents("miters.txt");
-	$s = $s . $p . "\n";
+	$s = explode("\n", $s);
+	$exists = 0;
+	foreach ($s as $a) {
+		if (strcmp($p, $a) == 0) {
+			$exists = 1;
+		}
+	}
+	$s = implode("\n", $s);
+	// avoid duplicate names
+	if ($exists == 0) {
+		$s = $s . $p . "\n";
+	}
 	if (file_put_contents("miters.txt", $s, LOCK_EX) == FALSE) {
 		$ret = -1;
 	}
