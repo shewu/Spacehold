@@ -1,6 +1,9 @@
 package com.spacehold;
 
+import com.spacehold.MyLocation.LocationResult;
+
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 
 public class AppActivity extends Activity {
@@ -10,4 +13,16 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
+    
+    MyLocation myLocation = new MyLocation();
+    private void locationClick() {
+        myLocation.getLocation(this, locationResult);
+    }
+
+    public LocationResult locationResult = new LocationResult(){
+        @Override
+        public void gotLocation(final Location location){
+            //Got the location!
+        }
+    };
 }
