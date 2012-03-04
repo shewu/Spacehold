@@ -22,6 +22,7 @@ function addPerson($p) {
 		$ret = -1;
 	}
 	release();
+	echo $ret;
 	return $ret;
 }
 
@@ -39,11 +40,13 @@ function removePerson($p) {
 		$ret = -1;
 	}
 	release();
+	echo $ret;
 	return $ret;
 }
 
 function getPeople() {
 	$s = file_get_contents("miters.txt");
+	echo $s;
 	return $s;
 }
 
