@@ -5,6 +5,7 @@
  * We need to deal with locking somehow.
  */
 
+echo "hello";
 function testAndSet() {
 
 }
@@ -13,6 +14,7 @@ function release() {
 
 }
 
+/*
 function addPerson($p) {
 	$ret = 0;
 	testAndSet();
@@ -44,6 +46,7 @@ function removePerson($p) {
 	return $ret;
 }
 
+*/
 function getKeyholders() {
 	$s = file_get_contents("miters.txt");
 	echo $s;
@@ -58,7 +61,7 @@ if (isset($_GET["addPerson"])) {
 	//removePerson($_GET("leave"));
 } else if (isset($_GET["getKeyholders"])) {
 	echo "getKeyholders";
-	//getKeyholders();
+	getKeyholders();
 } else {
 	echo "no argument or invalid argument specified!";
 }
