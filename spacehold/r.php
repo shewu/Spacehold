@@ -5,8 +5,6 @@
  * We need to deal with locking somehow.
  */
 
-echo "hello";
-
 function testAndSet() {
 
 }
@@ -15,7 +13,6 @@ function release() {
 
 }
 
-/*
 function addPerson($p) {
 	$ret = 0;
 	testAndSet();
@@ -52,7 +49,6 @@ function getKeyholders() {
 	echo $s;
 	return $s;
 }
-*/
 
 if (isset($_GET["addPerson"])) {
 	echo "addPerson";
