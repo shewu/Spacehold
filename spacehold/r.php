@@ -7,7 +7,6 @@
 
 echo "hello";
 
-/*
 function testAndSet() {
 
 }
@@ -16,6 +15,7 @@ function release() {
 
 }
 
+/*
 function addPerson($p) {
 	$ret = 0;
 	testAndSet();
@@ -52,6 +52,7 @@ function getKeyholders() {
 	echo $s;
 	return $s;
 }
+*/
 
 if (isset($_GET["addPerson"])) {
 	echo "addPerson";
@@ -65,6 +66,5 @@ if (isset($_GET["addPerson"])) {
 } else {
 	echo "no argument or invalid argument specified!";
 }
-*/
 ?>
 
