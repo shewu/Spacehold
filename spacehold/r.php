@@ -55,7 +55,7 @@ function getKeyholders() {
 
 if (isset($_GET["addPerson"])) {
 	echo "addPerson";
-	//addPerson($_GET["addPerson"]);
+	addPerson($_GET["addPerson"]);
 } else if (isset($_GET["leave"])) {
 	echo "leave";
 	//removePerson($_GET("leave"));
