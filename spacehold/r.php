@@ -7,6 +7,7 @@
 
 echo "hello";
 
+/*
 function testAndSet() {
 
 }
@@ -64,5 +65,6 @@ if (isset($_GET["addPerson"])) {
 } else {
 	echo "no argument or invalid argument specified!";
 }
+*/
 ?>
 
