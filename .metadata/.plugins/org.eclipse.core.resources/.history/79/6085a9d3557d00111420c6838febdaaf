@@ -16,7 +16,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
-           android:text="My location"
+           android:text="My locations"
            android:textColor="#00CCDD"
            android:textSize="25sp"
            android:textStyle="bold" />
