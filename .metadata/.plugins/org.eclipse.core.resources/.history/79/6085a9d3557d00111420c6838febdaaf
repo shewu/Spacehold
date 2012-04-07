@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/LinearLayout01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+       <TextView
+           android:id="@+id/TextView01"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="My locations"
+           android:textColor="#00CCDD"
+           android:textSize="25sp"
+           android:textStyle="bold" />
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="MITERS" />
+
+       <Button
+           android:id="@+id/button2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="3-270" />
+
+    </LinearLayout>
+
+</LinearLayout>
