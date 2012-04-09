@@ -11,7 +11,7 @@ public class SplashScreenActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		/** set time to splash out */
-		final int welcomeScreenDisplay = 3000;
+		final int welcomeScreenDisplay = 1000;
 		/** create a thread to show splash up to splash time */
 		Thread welcomeThread = new Thread() {
 
