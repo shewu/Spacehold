@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   <item
+      android:id="@+id/add"
+      android:icon="@android:drawable/ic_menu_add"
+      android:title="Add"/>
+
+   <item
+      android:id="@+id/help"
+      android:icon="@android:drawable/ic_menu_help"
+      android:title="Info"/>
+   <item android:id="@+id/Keyhold" android:title="Keyhold"></item>
+</menu>

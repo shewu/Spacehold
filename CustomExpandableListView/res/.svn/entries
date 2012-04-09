@@ -1,0 +1,43 @@
+10
+
+dir
+56
+http://myandroidwidgets.googlecode.com/svn/trunk/CustomExpandableListView/res
+http://myandroidwidgets.googlecode.com/svn
+
+
+
+2010-11-24T20:03:44.860366Z
+34
+coomar.101
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d5c1a463-17a8-e326-acdc-c018575ee69e
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+layout
+dir
+
+values
+dir
+
