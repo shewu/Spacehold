@@ -16,17 +16,41 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
-           android:text="MITERS"
+           android:text="Add a Space"
            android:textColor="#00CCDD"
            android:textSize="25sp"
            android:textStyle="bold" />
 
-       <ImageView
-           android:id="@+id/imageView1"
-           android:layout_width="wrap_content"
+       <EditText
+           android:id="@+id/editText1"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:src="@drawable/map" />
+           android:layout_marginTop="20dp"
+           android:text="Space Name" >
+
+           <requestFocus />
+       </EditText>
+
+       <EditText
+           android:id="@+id/editText2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:inputType="textPersonName" 
+           android:text="Your Name"/>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Set Location" />
+
+       <Button
+           android:id="@+id/button2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom"
+           android:layout_marginTop="200dp"
+           android:text="Finish and Save" />
 
     </LinearLayout>
 

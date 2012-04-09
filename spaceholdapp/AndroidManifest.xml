@@ -9,7 +9,9 @@
     <application
         android:icon="@drawable/icon"
         android:label="@string/app_name" 
-        android:theme="@android:style/Theme.NoTitleBar">
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:background="#FFFFFF"
+        >
         
         <activity
             android:name=".SplashScreenActivity"
@@ -23,6 +25,7 @@
         </activity>
         <activity android:name=".MainScreenActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MitersActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ExpandableList1" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

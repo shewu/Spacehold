@@ -3,5 +3,10 @@
 
     <string name="hello">Hello World, SpaceHoldActivity!</string>
     <string name="app_name">SpaceHold</string>
+    <string-array name="planets_array">
+        <item>MITERS</item>
+        <item>Maseeh Hall</item>
+    
+    </string-array>
 
 </resources>
