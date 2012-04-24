@@ -28,7 +28,7 @@ public class MainScreenActivity extends Activity  implements View.OnClickListene
 	private TextView t,t2,t3;
 	boolean occupied = false;
 	boolean first = true;
-	  public Integer[] mImageIds = {
+	public Integer[] mImageIds = {
 	            R.drawable.icon,
 	            R.drawable.icon,
 	            R.drawable.icon,
