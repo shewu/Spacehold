@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-public class SplashScreenActivity extends Activity {
-	static final String PREFS_NAME = "SHPrefs";
-	static final String HAS_RUN = "SHHasRun";
-	
+public class SplashScreenActivity extends Activity {	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -17,8 +14,6 @@ public class SplashScreenActivity extends Activity {
 		final int welcomeScreenDelay = 1000;
 		/** create a thread to show splash up to splash time */
 		Thread welcomeThread = new Thread() {
-			int wait = 0;
-
 			@Override
 			public void run() {
 				try {
@@ -35,8 +30,8 @@ public class SplashScreenActivity extends Activity {
 					 * Called after splash times up. Do some action after splash
 					 * times up. Here we moved to another main activity class
 					 */
-					SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-					boolean hasRun = settings.getBoolean(HAS_RUN, false);
+					SharedPreferences settings = getSharedPreferences(SHUtil.PREFS_NAME, 0);
+					boolean hasRun = settings.getBoolean(SHUtil.HAS_RUN, false);
 					if (!hasRun) {
 						startActivity(new Intent(SplashScreenActivity.this, SetupWelcomeActivity.class));
 					} else {
