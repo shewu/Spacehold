@@ -5,6 +5,9 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="10" />
+    
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
 
     <application
         android:icon="@drawable/icon"
@@ -26,6 +29,7 @@
         <activity android:name=".MainScreenActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MitersActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ExpandableList1" android:screenOrientation="portrait"/>
+        <activity android:name=".SetupWelcomeActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
