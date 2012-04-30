@@ -21,7 +21,7 @@ import android.os.Bundle;
 public class SetupSpaceChooserActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		
+		showSpacesChooser();
 	}
 	
 	private void showSpacesChooser() {
