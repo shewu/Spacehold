@@ -20,6 +20,7 @@ public class SetupWelcomeActivity extends Activity {
 		assert mNextButton != null;
 		mNextButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
+				finish();
 				startActivity(new Intent(SetupWelcomeActivity.this, SetupAccountChooserActivity.class));
 			}
 		});

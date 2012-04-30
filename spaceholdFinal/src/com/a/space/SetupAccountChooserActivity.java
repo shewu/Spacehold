@@ -36,6 +36,7 @@ public class SetupAccountChooserActivity extends Activity {
 				editor.putString(SHUtil.ACCOUNT_NAME, mAccount.name);
 				editor.commit();
 				
+				finish();
 				startActivity(new Intent(SetupAccountChooserActivity.this, SetupSpaceChooserActivity.class));
 			}
 		});
