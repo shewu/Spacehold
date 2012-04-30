@@ -30,6 +30,8 @@
         <activity android:name=".MitersActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ExpandableList1" android:screenOrientation="portrait"/>
         <activity android:name=".SetupWelcomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SetupAccountChooserActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SetupSpaceChooserActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
