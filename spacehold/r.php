@@ -5,74 +5,102 @@
  * We need to deal with locking somehow.
  */
 
-echo "hello";
-function testAndSet() {
+$DB_NAME = "shewu+spacehold";
+$DB_SERVER = "mysql.mit.edu";
+$DB_LOGIN = "shewu";
 
+$SPACES_TBL = "spaces";
+$PEOPLE_TBL = "people";
+$PASSWD_FILE = "password.txt"
+
+function getPassword() {
+    return file_get_contents($PASSWD_FILE);
 }
 
-function release() {
+function addSpace($spaceName) {
+    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!mysql_select_db($DB_NAME)) {
+        echo "Database " . $DB_NAME . " not found!";
+        die();
+    }
+    $cmd = sprintf("INSERT INTO %s VALUES ('%s')", $SPACES_TBL, $spaceName);
+    $result = mysql_query($cmd);
+    if (!$result) {
+        echo "ERROR: command " . $cmd . " failed!";
+        die();
+    }
 
+    mysql_free_result($result);
+    mysql_close($con);
 }
 
-function addPerson($p) {
-	$ret = 0;
-	testAndSet();
-	$s = file_get_contents("miters.txt");
-	$s = explode("\n", $s);
-	$exists = 0;
-	foreach ($s as $a) {
-		if (strcmp($p, $a) == 0) {
-			$exists = 1;
-		}
-	}
-	$s = implode("\n", $s);
-	// avoid duplicate names
-	if ($exists == 0) {
-		$s = $s . $p . "\n";
-	}
-	if (file_put_contents("miters.txt", $s, LOCK_EX) == FALSE) {
-		$ret = -1;
-	}
-	release();
-	echo $ret;
-	return $ret;
+function addPersonToSpace($person, $space) {
+    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!mysql_select_db($DB_NAME)) {
+        echo "Database " . $DB_NAME . " not found!";
+        die();
+    }
+    $cmd = sprintf("INSERT INTO %s VALUES ('%s', '%s')", $PEOPLE_TBL, $person, $space);
+    $result = mysql_query($cmd);
+    if (!$result) {
+        echo "ERROR: command " . $cmd . " failed!";
+        die();
+    }
+
+    mysql_free_result($result);
+    mysql_close($con);
 }
 
-function removePerson($p) {
-	testAndSet();
-	$s = file_get_contents("miters.txt");
-	$s = explode("\n", $s);
-	foreach ($s as $a) {
-		if (strcmp($p, $a) == 0) {
-			unset($a);
-		}
-	}
-	$s = implode("\n", $s);
-	if (file_put_contents("miters.txt", $s, LOCK_EX) == FALSE) {
-		$ret = -1;
-	}
-	release();
-	echo $ret;
-	return $ret;
+function getSpaces() {
+    $out = array();
+
+    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!mysql_select_db($DB_NAME)) {
+        echo "Database " . $DB_NAME . " not found!";
+        die();
+    }
+    $cmd = sprintf("SELECT * FROM %s", $SPACES_TBL);
+    $result = mysql_query($cmd);
+    if (!$result) {
+        echo "ERROR: command " . $cmd . " failed!";
+        die();
+    }
+
+    while ($row = mysql_fetch_assoc($result)) {
+        foreach ($row as $val) {
+            $out[] = $row;
+        }
+    }
+
+    mysql_free_result($result);
+    mysql_close($con);
 }
 
-function getKeyholders() {
-	$s = file_get_contents("miters.txt");
-	echo $s;
-	return $s;
-}
+function getPeopleAndSpaces() {
+    $out = array();
 
-if (isset($_GET["addPerson"])) {
-	echo "addPerson";
-	addPerson($_GET["addPerson"]);
-} else if (isset($_GET["leave"])) {
-	echo "leave";
-	removePerson($_GET("leave"));
-} else if (isset($_GET["getKeyholders"])) {
-	echo "getKeyholders";
-	getKeyholders();
-} else {
-	echo "no argument or invalid argument specified!";
+    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!mysql_select_db($DB_NAME)) {
+        echo "Database " . $DB_NAME . " not found!";
+        die();
+    }
+    $cmd = sprintf("SELECT * from %s", $SPACES_TBL);
+    $result = mysql_query($cmd);
+    if (!$result) {
+        echo "ERROR: command " . $cmd . " failed!";
+        die();
+    }
+
+    while ($row = mysql_fetch_assoc($result)) {
+        $inner = array()
+        foreach ($row as $val) {
+            $inner[] = $val;
+        }
+        $out[] = $inner;
+    }
+
+    mysql_free_result($result);
+    mysql_close($con);
 }
 ?>
 
