@@ -20,15 +20,19 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class SetupSpaceChooserActivity extends Activity {
 	private List<CharSequence> mChosenSpaces;
+	private TextView mSpacesListTextView;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.setup_space_chooser_activity);
 		mChosenSpaces = new LinkedList<CharSequence>();
+		mSpacesListTextView = (TextView)findViewById(R.id.textView2);
+		assert mSpacesListTextView != null;
 
 		showSpacesChooser();
 	}
@@ -46,6 +50,7 @@ public class SetupSpaceChooserActivity extends Activity {
 				} else {
 					mChosenSpaces.remove(items[which]);
 				}
+				refreshSpaceListTextView();
 			}
 		});
 		builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
@@ -61,6 +66,15 @@ public class SetupSpaceChooserActivity extends Activity {
 			}
 		});
 		builder.create().show();
+	}
+	
+	private void refreshSpaceListTextView() {
+		StringBuilder sb = new StringBuilder();
+		for (CharSequence s : mChosenSpaces) {
+			sb.append(s);
+			sb.append("\n");
+		}
+		mSpacesListTextView.setText(sb.toString());
 	}
 	
 	private void addSpaceToServer(CharSequence s) {
