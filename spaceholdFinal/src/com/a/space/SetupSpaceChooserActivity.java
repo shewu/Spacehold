@@ -17,6 +17,7 @@ import org.apache.http.protocol.HttpContext;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,8 +54,8 @@ public class SetupSpaceChooserActivity extends Activity {
 					return;
 				}
 				
-				// TODO transition to setup finished view
 				finish();
+				startActivity(new Intent(SetupSpaceChooserActivity.this, SetupFinishedActivity.class));
 			}
 		});
 
