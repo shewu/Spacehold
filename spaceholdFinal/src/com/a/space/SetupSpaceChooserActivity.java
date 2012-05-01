@@ -49,13 +49,29 @@ public class SetupSpaceChooserActivity extends Activity {
 		finishSetupButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				if (mChosenSpaces.size() < 1) {
-					// TODO show error dialog
+					showNoSpaceChosenWarning();
 					return;
 				}
+				
+				// TODO transition to setup finished view
+				finish();
 			}
 		});
 
 		showSpacesChooser();
+	}
+	
+	private void showNoSpaceChosenWarning() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Spacehold");
+		builder.setMessage("Choose a space before proceeding.");
+		builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				return;
+			}
+		});
+		
+		builder.create().show();
 	}
 	
 	private void showSpacesChooser() {
@@ -128,11 +144,7 @@ public class SetupSpaceChooserActivity extends Activity {
 		try {
 			HttpResponse response = httpClient.execute(httpGet, localContext);
 			
-			BufferedReader reader = new BufferedReader(
-					new InputStreamReader(
-							response.getEntity().getContent()
-				    )
-			);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 
 			String line = null;
 			List<String> tmp = new ArrayList<String>();
