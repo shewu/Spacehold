@@ -21,6 +21,7 @@ public class SetupAccountChooserActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.setup_account_chooser);
 		
 		mPickAccountButton = (Button)findViewById(R.id.button1);
 		mPickAccountButton.setOnClickListener(new OnClickListener() {
@@ -31,6 +32,11 @@ public class SetupAccountChooserActivity extends Activity {
 		mContinueButton = (Button)findViewById(R.id.button2);
 		mContinueButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
+				if (mAccount == null) {
+					showNoAccountChosenWarning();
+					return;
+				}
+				
 				SharedPreferences settings = getSharedPreferences(SHUtil.PREFS_NAME, 0);
 				SharedPreferences.Editor editor = settings.edit();
 				editor.putString(SHUtil.ACCOUNT_NAME, mAccount.name);
@@ -42,6 +48,19 @@ public class SetupAccountChooserActivity extends Activity {
 		});
 	    
 	    showAccountsChooser();
+	}
+	
+	private void showNoAccountChosenWarning() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Spacehold");
+		builder.setMessage("Choose an account before proceeding.");
+		builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				return;
+			}
+		});
+		
+		builder.create().show();
 	}
 	
 	private void showAccountsChooser() {
@@ -59,6 +78,12 @@ public class SetupAccountChooserActivity extends Activity {
 	          useAccount(accounts[which]);
 	        }
 	    });
+		builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+			}
+		});
+
 	    builder.create().show();
 	}
 	

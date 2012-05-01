@@ -21,7 +21,7 @@ public class SetupWelcomeActivity extends Activity {
 		mNextButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				finish();
-				startActivity(new Intent(SetupWelcomeActivity.this, SetupAccountChooserActivity.class));
+				startActivity(new Intent(arg0.getContext(), SetupAccountChooserActivity.class));
 			}
 		});
 	}
