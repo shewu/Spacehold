@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -16,32 +17,42 @@ import org.apache.http.protocol.HttpContext;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 public class SetupSpaceChooserActivity extends Activity {
+	private List<CharSequence> mChosenSpaces;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.setup_space_chooser_activity);
+		mChosenSpaces = new LinkedList<CharSequence>();
 
 		showSpacesChooser();
 	}
 	
 	private void showSpacesChooser() {
-		CharSequence[] items = getListOfSpaces();
+		final CharSequence[] items = getListOfSpaces();
 		boolean[] states = new boolean[items.length];
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Select spaces to join");
 		builder.setMultiChoiceItems(items, states, new DialogInterface.OnMultiChoiceClickListener() {
 			public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-				// TODO Auto-generated method stub
-				
+				assert which < items.length;
+				if (isChecked) {
+					mChosenSpaces.add(items[which]);
+				} else {
+					mChosenSpaces.remove(items[which]);
+				}
 			}
 		});
 		builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
-				// TODO Auto-generated method stub
-				
+				for (CharSequence s : mChosenSpaces) {
+					addSpaceToServer(s);
+				}
 			}
 		});
 		builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -52,11 +63,33 @@ public class SetupSpaceChooserActivity extends Activity {
 		builder.create().show();
 	}
 	
+	private void addSpaceToServer(CharSequence s) {
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpContext localContext = new BasicHttpContext();
+		SharedPreferences settings = getSharedPreferences(SHUtil.PREFS_NAME, 0);
+		String userName = settings.getString(SHUtil.ACCOUNT_NAME, "");
+		if (userName.equals("")) {
+			Log.wtf("Spacehold", "no user registered with app");
+		}
+
+		HttpGet httpGet = new HttpGet("http://shewu.scripts.mit.edu/Spacehold/spacehold"); // TODO change to our URL
+		try {
+			HttpResponse response = httpClient.execute(httpGet, localContext);
+			BufferedReader in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			int spacesWritten = Integer.parseInt(in.readLine());
+			if (spacesWritten < mChosenSpaces.size()) {
+				Log.wtf("Spacehold", "did not add expected number of spaces for user " + userName);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	private CharSequence[] getListOfSpaces() {
 		CharSequence[] seq = new CharSequence[0];
 		HttpClient httpClient = new DefaultHttpClient();
 		HttpContext localContext = new BasicHttpContext();
-		HttpGet httpGet = new HttpGet("http://www.spartanjava.com"); // TODO change to our URL
+		HttpGet httpGet = new HttpGet("http://shewu.scripts.mit.edu/Spacehold/spacehold"); // TODO change to our URL
 		try {
 			HttpResponse response = httpClient.execute(httpGet, localContext);
 			
