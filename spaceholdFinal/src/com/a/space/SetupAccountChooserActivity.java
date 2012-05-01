@@ -74,7 +74,6 @@ public class SetupAccountChooserActivity extends Activity {
 	    }
 	    builder.setItems(names, new DialogInterface.OnClickListener() {
 	        public void onClick(DialogInterface dialog, int which) {
-	          // Stuff to do when the account is selected by the user
 	          useAccount(accounts[which]);
 	        }
 	    });
