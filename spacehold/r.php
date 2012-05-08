@@ -2,9 +2,9 @@
 
 include 'fn.php';
 
-/*
 $cmd = $_GET["cmd"];
 
+/*
 if (strcmp($cmd, "getspaces") == 0) {
     getSpaces();
 } else if (strcmp($cmd, "spaceinfo") == 0) {
