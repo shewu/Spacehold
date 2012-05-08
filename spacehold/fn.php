@@ -101,8 +101,6 @@ function getSpaces() {
     global $DB_NAME, $DB_SERVER, $DB_LOGIN;
     global $SPACES_TBL, $PEOPLE_TBL;
 
-    $out = array();
-
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!$con) {
         echo "Failed to connect to database.";
@@ -122,7 +120,6 @@ function getSpaces() {
     while ($row = mysql_fetch_assoc($result)) {
         foreach ($row as $val) {
             echo $val . "\n";
-            $out[] = $val;
         }
     }
 
@@ -133,8 +130,6 @@ function getSpaces() {
 function getPeopleAndSpaces() {
     global $DB_NAME, $DB_SERVER, $DB_LOGIN;
     global $SPACES_TBL, $PEOPLE_TBL;
-
-    $out = array();
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!$con) {
@@ -153,26 +148,45 @@ function getPeopleAndSpaces() {
     }
 
     while ($row = mysql_fetch_assoc($result)) {
-        $inner = array();
         foreach ($row as $val) {
-            $inner[] = $val;
+            echo $row['handle'] . "; " . $row['space'] . "\n";
         }
-        $out[] = $inner;
     }
 
     mysql_free_result($result);
     mysql_close($con);
-
-    return $out;
 }
 
 function getPeopleAtSpace($space) {
-    $pairs = getPeopleAndSpaces();
-    foreach ($pairs as $pair) {
-        if (strcmp($pair[1], $space) == 0) {
-            echo $pair[0] . "; " . $pair[1] . "\n";
+    global $DB_NAME, $DB_SERVER, $DB_LOGIN;
+    global $SPACES_TBL, $PEOPLE_TBL;
+
+    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!$con) {
+        echo "Failed to connect to database.";
+        die();
+    }
+    if (!mysql_select_db($DB_NAME)) {
+        echo "Database " . $DB_NAME . " not found!";
+        die();
+    }
+    $cmd = sprintf("SELECT * from %s", $SPACES_TBL);
+    $result = mysql_query($cmd);
+    if (!$result) {
+        echo "ERROR: command " . $cmd . " failed!";
+        die();
+    }
+
+    while ($row = mysql_fetch_assoc($result)) {
+        foreach ($row as $val) {
+            if (strcmp($space, $row['space']) == 0) {
+                echo $row['handle'] . "\n";
+            }
         }
     }
+
+    mysql_free_result($result);
+    mysql_close($con);
 }
 ?>
 
