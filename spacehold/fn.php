@@ -14,6 +14,8 @@ $PEOPLE_TBL = "people";
 $PASSWD_FILE = "password.txt";
 
 function getPassword() {
+    global $PASSWD_FILE;
+
     return file_get_contents($PASSWD_FILE);
 }
 
