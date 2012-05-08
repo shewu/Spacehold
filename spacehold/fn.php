@@ -32,17 +32,32 @@ function addSpace($spaceName) {
         echo "Database " . $DB_NAME . " not found!";
         die();
     }
-    $cmd = sprintf("INSERT INTO %s VALUES ('%s')", $SPACES_TBL, $spaceName);
-    $result = mysql_query($cmd);
-    if (!$result) {
-        echo "ERROR: command " . $cmd . " failed!";
-        die();
+
+    // if space exists, don't add it
+    $exists = false;
+    while ($row = mysql_fetch_assoc($result)) {
+        foreach ($row as $val) {
+            if (strcmp($val, $spaceName) == 0) {
+                $exists = true;
+                break;
+            }
+        }
+    }
+
+    if (!$exists) {
+        $cmd = sprintf("INSERT INTO %s VALUES ('%s')", $SPACES_TBL, $spaceName);
+        $result = mysql_query($cmd);
+        if (!$result) {
+            echo "ERROR: command " . $cmd . " failed!";
+            die();
+        }
+        echo "0";
+    } else {
+        echo "1";
     }
 
     mysql_free_result($result);
     mysql_close($con);
-
-    echo "0";
 }
 
 function addPersonToSpace($person, $space) {
