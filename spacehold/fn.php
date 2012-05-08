@@ -25,6 +25,7 @@ function addSpace($spaceName) {
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!$con) {
+        echo getPassword();
         echo "Failed to connect to database.";
         die();
     }
