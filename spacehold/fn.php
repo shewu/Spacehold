@@ -18,6 +18,9 @@ function getPassword() {
 }
 
 function addSpace($spaceName) {
+    global $DB_NAME, $DB_SERVER, $DB_LOGIN;
+    global $SPACES_TBL, $PEOPLE_TBL;
+
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
@@ -35,6 +38,9 @@ function addSpace($spaceName) {
 }
 
 function addPersonToSpace($person, $space) {
+    global $DB_NAME, $DB_SERVER, $DB_LOGIN;
+    global $SPACES_TBL, $PEOPLE_TBL;
+
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
@@ -52,9 +58,11 @@ function addPersonToSpace($person, $space) {
 }
 
 function getSpaces() {
+    global $DB_NAME, $DB_SERVER, $DB_LOGIN;
+    global $SPACES_TBL, $PEOPLE_TBL;
+
     $out = array();
 
-    echo $DB_NAME;
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
@@ -78,6 +86,9 @@ function getSpaces() {
 }
 
 function getPeopleAndSpaces() {
+    global $DB_NAME, $DB_SERVER, $DB_LOGIN;
+    global $SPACES_TBL, $PEOPLE_TBL;
+
     $out = array();
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
