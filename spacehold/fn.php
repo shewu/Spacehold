@@ -17,7 +17,6 @@ function getPassword() {
     return file_get_contents($PASSWD_FILE);
 }
 
-/*
 function addSpace($spaceName) {
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
     if (!mysql_select_db($DB_NAME)) {
@@ -114,6 +113,5 @@ function getPeopleAtSpace($space) {
         }
     }
 }
-*/
 ?>
 
