@@ -101,6 +101,17 @@ function getPeopleAndSpaces() {
 
     mysql_free_result($result);
     mysql_close($con);
+
+    return $out;
+}
+
+function getPeopleAtSpace($space) {
+    $pairs = getPeopleAndSpaces();
+    foreach ($pairs as $pair) {
+        if (strcmp($pair[1], $space) == 0) {
+            echo $pair[0] . "; " $pair[1] . "\n";
+        }
+    }
 }
 ?>
 
