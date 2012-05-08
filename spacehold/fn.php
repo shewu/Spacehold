@@ -51,7 +51,6 @@ function addPersonToSpace($person, $space) {
     mysql_close($con);
 }
 
-/*
 function getSpaces() {
     $out = array();
 
@@ -69,7 +68,7 @@ function getSpaces() {
 
     while ($row = mysql_fetch_assoc($result)) {
         foreach ($row as $val) {
-            $out[] = $row;
+            $out[] = $val;
         }
     }
 
@@ -77,6 +76,7 @@ function getSpaces() {
     mysql_close($con);
 }
 
+/*
 function getPeopleAndSpaces() {
     $out = array();
 
