@@ -2,6 +2,7 @@
 
 include 'fn.php';
 
+/*
 $cmd = $_GET["cmd"];
 
 if (strcmp($cmd, "getspaces") == 0) {
@@ -19,4 +20,5 @@ if (strcmp($cmd, "getspaces") == 0) {
 } else {
     echo "-1\n";
 }
+*/
 ?>
