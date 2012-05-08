@@ -92,7 +92,7 @@ function getPeopleAndSpaces() {
     }
 
     while ($row = mysql_fetch_assoc($result)) {
-        $inner = array()
+        $inner = array();
         foreach ($row as $val) {
             $inner[] = $val;
         }
@@ -105,15 +105,13 @@ function getPeopleAndSpaces() {
     return $out;
 }
 
-/*
 function getPeopleAtSpace($space) {
     $pairs = getPeopleAndSpaces();
     foreach ($pairs as $pair) {
         if (strcmp($pair[1], $space) == 0) {
-            echo $pair[0] . "; " $pair[1] . "\n";
+            echo $pair[0] . "; " . $pair[1] . "\n";
         }
     }
 }
-*/
 ?>
 
