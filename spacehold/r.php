@@ -19,5 +19,4 @@ if (strcmp($cmd, "getspaces") == 0) {
 } else {
     echo "-1\n";
 }
-*/
 ?>
