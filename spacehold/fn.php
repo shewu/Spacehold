@@ -24,6 +24,10 @@ function addSpace($spaceName) {
     global $SPACES_TBL, $PEOPLE_TBL;
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!$con) {
+        echo "Failed to connect to database.";
+        die();
+    }
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
         die();
