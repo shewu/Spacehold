@@ -76,7 +76,6 @@ function getSpaces() {
     mysql_close($con);
 }
 
-/*
 function getPeopleAndSpaces() {
     $out = array();
 
@@ -106,6 +105,7 @@ function getPeopleAndSpaces() {
     return $out;
 }
 
+/*
 function getPeopleAtSpace($space) {
     $pairs = getPeopleAndSpaces();
     foreach ($pairs as $pair) {
