@@ -95,7 +95,7 @@ function getSpaces() {
 
     while ($row = mysql_fetch_assoc($result)) {
         foreach ($row as $val) {
-            echo $val;
+            echo $val . "\n";
             $out[] = $val;
         }
     }
