@@ -89,6 +89,7 @@ function addPersonToSpace($person, $space) {
             echo "ERROR: command " . $cmd . " failed!";
             die();
         }
+        echo "0";
     } else {
         echo "Person " . $person . " is already in space " . $space;
     }
