@@ -53,7 +53,7 @@ function addSpace($spaceName) {
         }
         echo "0";
     } else {
-        echo "1";
+        echo "Space " . $spaceName . " already exists";
     }
 
     mysql_free_result($result);
@@ -73,17 +73,28 @@ function addPersonToSpace($person, $space) {
         echo "Database " . $DB_NAME . " not found!";
         die();
     }
-    $cmd = sprintf("INSERT INTO %s VALUES ('%s', '%s')", $PEOPLE_TBL, $person, $space);
-    $result = mysql_query($cmd);
-    if (!$result) {
-        echo "ERROR: command " . $cmd . " failed!";
-        die();
+
+    $exists = false;
+    while ($row = mysql_fetch_assoc($result)) {
+        if (strcmp($row['space'], $space) == 0 && strcmp($row['handle'], $person) == 0) {
+            $exists = true;
+            break;
+        }
+    }
+
+    if (!$exists) {
+        $cmd = sprintf("INSERT INTO %s VALUES ('%s', '%s')", $PEOPLE_TBL, $person, $space);
+        $result = mysql_query($cmd);
+        if (!$result) {
+            echo "ERROR: command " . $cmd . " failed!";
+            die();
+        }
+    } else {
+        echo "Person " . $person . " is already in space " . $space;
     }
 
     mysql_free_result($result);
     mysql_close($con);
-
-    echo "0";
 }
 
 function getSpaces() {
