@@ -41,6 +41,8 @@ function addSpace($spaceName) {
 
     mysql_free_result($result);
     mysql_close($con);
+
+    echo "0";
 }
 
 function addPersonToSpace($person, $space) {
@@ -48,6 +50,10 @@ function addPersonToSpace($person, $space) {
     global $SPACES_TBL, $PEOPLE_TBL;
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!$con) {
+        echo "Failed to connect to database.";
+        die();
+    }
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
         die();
@@ -61,6 +67,8 @@ function addPersonToSpace($person, $space) {
 
     mysql_free_result($result);
     mysql_close($con);
+
+    echo "0";
 }
 
 function getSpaces() {
@@ -70,6 +78,10 @@ function getSpaces() {
     $out = array();
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!$con) {
+        echo "Failed to connect to database.";
+        die();
+    }
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
         die();
@@ -83,6 +95,7 @@ function getSpaces() {
 
     while ($row = mysql_fetch_assoc($result)) {
         foreach ($row as $val) {
+            echo $val;
             $out[] = $val;
         }
     }
@@ -98,6 +111,10 @@ function getPeopleAndSpaces() {
     $out = array();
 
     $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    if (!$con) {
+        echo "Failed to connect to database.";
+        die();
+    }
     if (!mysql_select_db($DB_NAME)) {
         echo "Database " . $DB_NAME . " not found!";
         die();
