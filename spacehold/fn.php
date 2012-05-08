@@ -23,7 +23,8 @@ function addSpace($spaceName) {
     global $DB_NAME, $DB_SERVER, $DB_LOGIN;
     global $SPACES_TBL, $PEOPLE_TBL;
 
-    $con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    //$con = mysql_connect($DB_SERVER, $DB_LOGIN, getPassword());
+    $con = mysql_connect('mysql.mit.edu', 'shewu', getPassword());
     if (!$con) {
         echo "Failed to connect to database.";
         die();
