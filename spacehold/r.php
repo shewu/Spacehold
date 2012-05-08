@@ -1,8 +1,8 @@
 <?php
 
-include 'fn.php'
+include 'fn.php';
 
-$cmd = $_GET["cmd"]
+$cmd = $_GET["cmd"];
 
 if (strcmp($cmd, "getspaces") == 0) {
     getSpaces();

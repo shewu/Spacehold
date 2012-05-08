@@ -12,7 +12,7 @@ $DB_LOGIN = "shewu";
 $SPACES_TBL = "spaces";
 $PEOPLE_TBL = "people";
 $PASSWD_FILE = "password.txt"
-
+/*
 function getPassword() {
     return file_get_contents($PASSWD_FILE);
 }
@@ -113,5 +113,6 @@ function getPeopleAtSpace($space) {
         }
     }
 }
+*/
 ?>
 
