@@ -4,9 +4,10 @@ include 'fn.php';
 
 $cmd = $_GET["cmd"];
 
-/*
 if (strcmp($cmd, "getspaces") == 0) {
     getSpaces();
+}
+/*
 } else if (strcmp($cmd, "spaceinfo") == 0) {
     $which = $_GET["space"]
     getPeopleAtSpace($which);
