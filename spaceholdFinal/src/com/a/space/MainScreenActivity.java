@@ -1,11 +1,22 @@
 package com.a.space;
 
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,13 +27,28 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainScreenActivity extends Activity  implements View.OnClickListener{
+	WifiManager wifi;
+	ListView lv;
+    TextView textStatus;
+    Button buttonScan;
+    int size = 0;
+    List<ScanResult> results;
+
+    String ITEM_KEY = "key";
+    ArrayList<HashMap<String, String>> arraylist = new ArrayList<HashMap<String, String>>();
+    SimpleAdapter adapter;
+    
+    
 	/** Called when the activity is first created. */
 	
 	private TextView t,t2,t3;
@@ -48,6 +74,62 @@ public class MainScreenActivity extends Activity  implements View.OnClickListene
 	    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	    spinner.setAdapter(adapter);
 	    spinner.setOnItemSelectedListener(new MyOnItemSelectedListener());
+	    
+	    
+	    
+	    wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+	    if (wifi.isWifiEnabled() == false)
+        {
+            Toast.makeText(getApplicationContext(), "wifi is disabled..making it enabled", Toast.LENGTH_LONG).show();
+            wifi.setWifiEnabled(true);
+        }  
+	    registerReceiver(new BroadcastReceiver()
+        {
+            @Override
+            public void onReceive(Context c, Intent intent) 
+            {
+               results = wifi.getScanResults();
+               size = results.size();
+            }
+        }, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));  
+	    Button getBSSID = (Button) findViewById(R.id.buttonBSSID);
+	    getBSSID.setOnClickListener(new View.OnClickListener(){
+	    	public void onClick(View view){
+	    		//Toast.makeText(getApplicationContext(),"BSSID",Toast.LENGTH_SHORT).show();
+	    		
+	    		//List<ScanResult> results = wifi.getScanResults();
+	    		//String bleh = Integer.toString(results.size());
+	    		//Toast.makeText(getApplicationContext(),bleh,Toast.LENGTH_SHORT).show();
+	    		arraylist.clear();          
+	            wifi.startScan();
+	            String tst = "";
+	            int lvl = -200;
+	            String strongest = "";
+	            Toast.makeText(getApplicationContext(), "Scanning...." + size, Toast.LENGTH_SHORT).show();
+	            try 
+	            {
+	                size = size - 1;
+	                while (size >= 0) 
+	                {   
+	                    //HashMap<String, String> item = new HashMap<String, String>();                       
+	                    //item.put(ITEM_KEY, results.get(size).SSID + "  " + results.get(size).capabilities);
+
+	                    //arraylist.add(item);
+	                	tst = tst + results.get(size).BSSID + "\n";
+	                	if (results.get(size).level > lvl){
+	                		lvl = results.get(size).level;
+	                		strongest = results.get(size).BSSID;
+	                		
+	                	}
+	                    size--;
+	                    //adapter.notifyDataSetChanged();                 
+	                } 
+	                Toast.makeText(getApplicationContext(), "Strongest BSSID: " + strongest, Toast.LENGTH_SHORT).show();
+	            }
+	            catch (Exception e)
+	            { }      
+	    	}
+	    });
 	    
 	    
 	    t=new TextView(this); 
@@ -116,14 +198,53 @@ public class MainScreenActivity extends Activity  implements View.OnClickListene
 	        return position;
 	    }
 
+	   
+	    /*
+	    public Bitmap getRemoteImage(String url){
+	    	try{
+	    URL aURL = new URL(url);
+	    final URLConnection conn = aURL.openConnection();
+	    conn.connect();
+	    final BufferedInputStream bis = new BufferedInputStream(conn.getInputStream());
+	    final Bitmap bm = BitmapFactory.decodeStream(bis);
+	    bis.close();
+	    return bm;
+	    	}
+	    	catch(Exception e){
+	    		return null;
+	    	}
+	    }*/
 	    public View getView(int position, View convertView, ViewGroup parent) {
 	        ImageView imageView = new ImageView(mContext);
 
-	        imageView.setImageResource(mImageIds[position]);
-	        imageView.setLayoutParams(new Gallery.LayoutParams(425, 319));
+	        //imageView.setImageResource(mImageIds[position]);
+	        String ur = "";
+	        switch(position){
+	        case 0: ur = "http://farm3.staticflickr.com/2001/5779101174_fee1cbc6ee_m.jpg";
+	        	break;
+	        case 1: ur = "http://farm6.staticflickr.com/5185/5779100862_69bb2e70c5_m.jpg";
+        	break;
+	        case 2: ur = "http://farm6.staticflickr.com/5188/5778556195_a3eaa7a370_m.jpg";
+        	break;
+	        case 3: ur = "http://farm6.staticflickr.com/5030/5778555917_a85f012d5f_m.jpg";
+        	break;
+	        case 4: ur = "http://farm6.staticflickr.com/5302/5631113669_1554b89b63_m.jpg";
+        	break;
+	        	default:
+	        		break;
+	        };
+	        
+	        try{
+	        Bitmap b = BitmapFactory.decodeStream((InputStream)new URL(ur).getContent());
+	        
+	        imageView.setImageBitmap(b);
+	        //imageView.setLayoutParams(new Gallery.LayoutParams(425, 319));
 	        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 	        imageView.setBackgroundResource(mGalleryItemBackground);
-
+	        }
+	        catch(Exception e){
+	        	
+	        }
 	        return imageView;
 	    }
 	}
@@ -170,7 +291,8 @@ public class MainScreenActivity extends Activity  implements View.OnClickListene
 	 t2.setText("Currently Occupied");
 	 t3.setText("Occupied for 86 hours");
 	      }
-	     
+	     t2.setText("");
+	     t3.setText("");
           doit();
 	    }
 
@@ -209,12 +331,12 @@ public class MainScreenActivity extends Activity  implements View.OnClickListene
 		   first = false;
 		   if(occupied){
 			   occupied = false;
-			   t2.setText("Currently Unoccupied");
+			   //t2.setText("Currently Unoccupied");
 			   
 		   }
 		   else{
 			   occupied = true;
-			   t2.setText("Currently Occupied");
+			   //t2.setText("Currently Occupied");
 			   
 		   }
 		   

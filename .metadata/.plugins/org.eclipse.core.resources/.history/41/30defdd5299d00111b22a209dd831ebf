@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/LinearLayout01"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+       <TextView
+           android:id="@+id/TextView01"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Nearby Spaces"
+           android:textColor="#00CCDD"
+           android:textSize="25sp"
+           android:textStyle="bold" 
+           />
+
+       <Spinner
+           android:id="@+id/spinner1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp" />
+
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="5dp"
+           android:text="Large Text"
+           android:textAppearance="?android:attr/textAppearanceLarge"
+           android:textColor="#000000"
+           android:textStyle="bold" />
+
+       <Gallery
+           android:id="@+id/gallery1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Large Text"
+           android:textAppearance="?android:attr/textAppearanceLarge"
+           android:textColor="#000000"
+           android:textStyle="bold" />
+ <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Large Text"
+           android:textAppearance="?android:attr/textAppearanceLarge"
+           android:textColor="#000000"
+           android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
