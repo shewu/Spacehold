@@ -2,21 +2,18 @@ package com.a.space;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
-public class SplashScreenActivity extends Activity {
-
+public class SplashScreenActivity extends Activity {	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
 		/** set time to splash out */
-		final int welcomeScreenDisplay = 1000;
+		final int welcomeScreenDelay = 1500;
 		/** create a thread to show splash up to splash time */
 		Thread welcomeThread = new Thread() {
-
-			int wait = 0;
-
 			@Override
 			public void run() {
 				try {
@@ -25,19 +22,21 @@ public class SplashScreenActivity extends Activity {
 					 * use while to get the splash time. Use sleep() to increase
 					 * the wait variable for every 100L.
 					 */
-					while (wait < welcomeScreenDisplay) {
-						sleep(100);
-						wait += 100;
-					}
+					sleep(welcomeScreenDelay);
 				} catch (Exception e) {
-					System.out.println("EXc=" + e);
+					e.printStackTrace();
 				} finally {
 					/**
 					 * Called after splash times up. Do some action after splash
 					 * times up. Here we moved to another main activity class
 					 */
-					startActivity(new Intent(SplashScreenActivity.this,
-							MainScreenActivity.class));
+					SharedPreferences settings = getSharedPreferences(SHUtil.PREFS_NAME, 0);
+					boolean hasRun = settings.getBoolean(SHUtil.HAS_RUN, false);
+					if (!hasRun) {
+						startActivity(new Intent(SplashScreenActivity.this, SetupWelcomeActivity.class));
+					} else {
+						startActivity(new Intent(SplashScreenActivity.this, MainScreenActivity.class));
+					}
 					finish();
 				}
 			}

@@ -1,78 +1,22 @@
 <?php
-/**
- * The request page.
- *
- * We need to deal with locking somehow.
- */
 
-echo "hello";
-function testAndSet() {
+include 'fn.php';
 
-}
+$cmd = $_GET["cmd"];
 
-function release() {
-
-}
-
-function addPerson($p) {
-	$ret = 0;
-	testAndSet();
-	$s = file_get_contents("miters.txt");
-	$s = explode("\n", $s);
-	$exists = 0;
-	foreach ($s as $a) {
-		if (strcmp($p, $a) == 0) {
-			$exists = 1;
-		}
-	}
-	$s = implode("\n", $s);
-	// avoid duplicate names
-	if ($exists == 0) {
-		$s = $s . $p . "\n";
-	}
-	if (file_put_contents("miters.txt", $s, LOCK_EX) == FALSE) {
-		$ret = -1;
-	}
-	release();
-	echo $ret;
-	return $ret;
-}
-
-function removePerson($p) {
-	testAndSet();
-	$s = file_get_contents("miters.txt");
-	$s = explode("\n", $s);
-	foreach ($s as $a) {
-		if (strcmp($p, $a) == 0) {
-			unset($a);
-		}
-	}
-	$s = implode("\n", $s);
-	if (file_put_contents("miters.txt", $s, LOCK_EX) == FALSE) {
-		$ret = -1;
-	}
-	release();
-	echo $ret;
-	return $ret;
-}
-
-function getKeyholders() {
-	$s = file_get_contents("miters.txt");
-	echo $s;
-	return $s;
-}
-
-if (isset($_GET["addPerson"])) {
-	echo "addPerson";
-	addPerson($_GET["addPerson"]);
-} else if (isset($_GET["leave"])) {
-	echo "leave";
-	removePerson($_GET("leave"));
-} else if (isset($_GET["getKeyholders"])) {
-	echo "getKeyholders";
-	getKeyholders();
+if (strcmp($cmd, "getspaces") == 0) {
+    getSpaces();
+} else if (strcmp($cmd, "spaceinfo") == 0) {
+    $which = $_GET["space"];
+    getPeopleAtSpace($which);
+} else if (strcmp($cmd, "addspace") == 0) {
+    $which = $_GET["space"];
+    addSpace($which);
+} else if (strcmp($cmd, "addperson") == 0) {
+    $space = $_GET["space"];
+    $person = $_GET["person"];
+    addPersonToSpace($person, $space);
 } else {
-	echo "no argument or invalid argument specified!";
+    echo "-1\n";
 }
 ?>
-
