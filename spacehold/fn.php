@@ -141,7 +141,7 @@ function getPeopleAndSpaces() {
         echo "Database " . $DB_NAME . " not found!";
         die();
     }
-    $cmd = sprintf("SELECT * from %s", $SPACES_TBL);
+    $cmd = sprintf("SELECT * from %s", $PEOPLE_TBL);
     $result = mysql_query($cmd);
     if (!$result) {
         echo "ERROR: command " . $cmd . " failed!";
@@ -171,7 +171,7 @@ function getPeopleAtSpace($space) {
         echo "Database " . $DB_NAME . " not found!";
         die();
     }
-    $cmd = sprintf("SELECT * from %s", $SPACES_TBL);
+    $cmd = sprintf("SELECT * from %s", $PEOPLE_TBL);
     $result = mysql_query($cmd);
     if (!$result) {
         echo "ERROR: command " . $cmd . " failed!";
