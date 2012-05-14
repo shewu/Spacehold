@@ -180,7 +180,6 @@ function getPeopleAtSpace($space) {
 
     while ($row = mysql_fetch_assoc($result)) {
         foreach ($row as $val) {
-            echo $row['space'];
             if (strcmp($space, $row['space']) == 0) {
                 echo $row['handle'] . "\n";
             }
