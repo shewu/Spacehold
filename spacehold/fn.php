@@ -74,8 +74,12 @@ function addPersonToSpace($person, $space) {
         die();
     }
 
+    $cmd = sprintf("SELECT * FROM %s", $PEOPLE_TBL);
+    $result = mysql_query($cmd);
+
     $exists = false;
     while ($row = mysql_fetch_assoc($result)) {
+        echo "looking at ".$row['space']." ".$row['handle']."\n";
         if (strcmp($row['space'], $space) == 0 && strcmp($row['handle'], $person) == 0) {
             $exists = true;
             break;
