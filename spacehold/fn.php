@@ -79,7 +79,7 @@ function addPersonToSpace($person, $space) {
 
     $exists = false;
     while ($row = mysql_fetch_assoc($result)) {
-        echo "looking at ".$row['space']." ".$row['handle']."\n";
+        //echo "looking at ".$row['space']." ".$row['handle']."\n";
         if (strcmp($row['space'], $space) == 0 && strcmp($row['handle'], $person) == 0) {
             $exists = true;
             break;
