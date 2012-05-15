@@ -7,7 +7,7 @@ include 'fn.php';
 <select>
 <?
 $spaces = file_get_contents('http://shewu.scripts.mit.edu/Spacehold/spacehold/r.php?cmd=getspaces&tok=21W.789');
-$spaces = explode(' ', $spaces);
+$spaces = explode('\n', $spaces);
 print_r($spaces);
 foreach ($spaces as $space) {
     echo "<option value=$space>$space</option>\n";
