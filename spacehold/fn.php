@@ -204,7 +204,7 @@ function removePersonFromSpace($person, $space) {
         die();
     }
 
-    $cmd = sprintf("DELETE FROM %s WHERE `space` = %s AND `handle` = %s", $PEOPLE_TBL, $space, $person);
+    $cmd = sprintf("DELETE FROM %s WHERE `space` = '%s' AND `handle` = '%s'", $PEOPLE_TBL, $space, $person);
     $result = mysql_query($cmd);
     if (!$result) {
         echo "ERROR: command " . $cmd . " failed!";
