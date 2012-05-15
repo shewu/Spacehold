@@ -20,9 +20,13 @@ if (isset($_POST['submit'])) {
     $leSpace = $_POST['space'];
     $people = file_get_contents("http://shewu.scripts.mit.edu/Spacehold/spacehold/r.php?cmd=spaceinfo&space=$leSpace&tok=21W.789");
     $people = preg_split('/[\s,]+/', trim($people));
+    echo "<table>";
     foreach ($people as $person) {
-        // TODO
+        echo "<tr>";
+        echo "<td>$person</td>";
+        echo "</tr>";
     }
+    echo "</table>";
 }
 ?>
 </body>
