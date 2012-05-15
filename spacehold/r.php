@@ -16,6 +16,10 @@ if (strcmp($cmd, "getspaces") == 0) {
     $space = $_GET["space"];
     $person = $_GET["person"];
     addPersonToSpace($person, $space);
+} else if (strcmp($cmd, "removeperson") == 0) {
+    $space = $_GET["space"];
+    $person = $_GET["person"];
+    removePersonFromSpace($person, $space);
 } else {
     echo "-1\n";
 }
