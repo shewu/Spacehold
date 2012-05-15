@@ -3,4 +3,19 @@
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="javax.swing.JTextPane"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyledDocument"/>
+<fullyQualifiedTypeName name="javax.swing.text.BadLocationException"/>
+<fullyQualifiedTypeName name="client.ConversationWidgetEnsemble"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleContext"/>
+<fullyQualifiedTypeName name="javax.swing.text.Style"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="conversation.ChatMessage"/>
+<fullyQualifiedTypeName name="conversation.UserRoomNotification"/>
+<fullyQualifiedTypeName name="conversation.ChatMessage.ChatMessageType"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleConstants.ColorConstants"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleConstants"/>
 </qualifiedTypeNameHistroy>

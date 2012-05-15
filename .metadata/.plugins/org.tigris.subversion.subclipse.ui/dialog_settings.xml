@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="512" key="CommitDialog.location.y"/>
 	<item value="585" key="passwordStores.size.y"/>
+	<item value="719" key="CommitDialog.location.x"/>
 	<item value="1920" key="passwordStores.size.x"/>
 	<item value="135" key="passwordStores.location.y"/>
-	<item value="0" key="passwordStores.location.x"/>
+	<item value="4" key="passwordStores.location.x"/>
+	<item value="1127" key="CommitDialog.size.x"/>
+	<item value="449" key="CommitDialog.size.y"/>
+	<section name="CommitWizard">
+		<item value="false" key="ShowCompare"/>
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+	</section>
 </section>

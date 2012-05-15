@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="39" version="2.0">
+<workbench progressCount="37" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="180" y="95">
 <fastViewData fastViewLocation="1024"/>
-<intro standby="true"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="160" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="136" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="61" y="22"/>
-<coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="38" y="22"/>
-<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="84" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="40" y="22"/>
+<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.team.ui.actionSet" itemType="typeToolBarContribution" x="40" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="120" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="76" y="22"/>
 <coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -37,34 +38,48 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="4"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SplashScreenActivity.java" partName="SplashScreenActivity.java" path="C:/Users/Victor-MBA/projects/Spacehold/spaceholdFinal/src/com/a/space/SplashScreenActivity.java" title="SplashScreenActivity.java" tooltip="spaceholdFinal/src/com/a/space/SplashScreenActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spaceholdFinal/src/com/a/space/SplashScreenActivity.java"/>
-<editorState selectionHorizontalPixel="119" selectionLength="0" selectionOffset="979" selectionTopPixel="166"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainScreenActivity.java" partName="MainScreenActivity.java" path="C:/Users/Victor-MBA/projects/Spacehold/spaceholdFinal/src/com/a/space/MainScreenActivity.java" title="MainScreenActivity.java" tooltip="spaceholdFinal/src/com/a/space/MainScreenActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spaceholdFinal/src/com/a/space/MainScreenActivity.java"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="/Users/shewu/Dropbox/21W.789/spacehold/guichat-starting/src/main/Client.java" title="Client.java" tooltip="guichat-starting/src/main/Client.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/guichat-starting/src/main/Client.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="spaceholdFinal Manifest" path="C:/Users/Victor-MBA/projects/Spacehold/spaceholdFinal/AndroidManifest.xml" title="spaceholdFinal Manifest" tooltip="spaceholdFinal/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spaceholdFinal/AndroidManifest.xml"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChatClient.java" partName="ChatClient.java" path="/Users/shewu/Dropbox/21W.789/spacehold/guichat-starting/src/client/ChatClient.java" title="ChatClient.java" tooltip="guichat-starting/src/client/ChatClient.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/guichat-starting/src/client/ChatClient.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="6245" selectionTopPixel="1764"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConversationWidgetEnsemble.java" partName="ConversationWidgetEnsemble.java" path="/Users/shewu/Dropbox/21W.789/spacehold/guichat-starting/src/client/ConversationWidgetEnsemble.java" title="ConversationWidgetEnsemble.java" tooltip="guichat-starting/src/client/ConversationWidgetEnsemble.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/guichat-starting/src/client/ConversationWidgetEnsemble.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5213" selectionTopPixel="1270"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoomNotification.java" partName="RoomNotification.java" path="/Users/shewu/Dropbox/21W.789/spacehold/guichat-starting/src/conversation/RoomNotification.java" title="RoomNotification.java" tooltip="guichat-starting/src/conversation/RoomNotification.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/guichat-starting/src/conversation/RoomNotification.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChatMessage.java" partName="ChatMessage.java" path="/Users/shewu/Dropbox/21W.789/spacehold/guichat-starting/src/conversation/ChatMessage.java" title="ChatMessage.java" tooltip="guichat-starting/src/conversation/ChatMessage.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/guichat-starting/src/conversation/ChatMessage.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="83"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.mylyn.tasks.ui.views.repositories" partName="Task Repositories">
+<viewState/>
+</view>
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
+<view id="org.eclipse.team.sync.views.SynchronizeView" partName="Synchronize">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -103,12 +118,6 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.internal.introview" partName="Welcome">
-<viewState>
-<presentation currentPage="root" restore="true"/>
-<standbyPart/>
-</viewState>
-</view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
 <sorter groupBy="CATEGORY_QUERY">
@@ -126,6 +135,7 @@
 <filteredTreeFindHistory/>
 </viewState>
 </view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
@@ -209,8 +219,6 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<view id="org.eclipse.ui.internal.introview"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -230,15 +238,12 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1e2d40c2" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
-<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<page content="org.eclipse.ui.internal.introview" label="Welcome"/>
+<folder appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
@@ -281,156 +286,239 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.team.internal.ui.synchronize.TeamSynchronizingPerspective" id="org.eclipse.team.ui.TeamSynchronizingPerspective" label="Team Synchronizing"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="adt.actionSet.lint"/>
+<alwaysOnActionSet id="org.eclipse.team.ui.actionSet"/>
+<show_view_action id="org.eclipse.team.sync.views.SynchronizeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.repositories"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.project"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.tigris.subversion.subclipse.ui.svnPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.team.sync.views.SynchronizeView"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.repositories"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="top">&#x0A;<folder activePageID="org.eclipse.team.sync.views.SynchronizeView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.sync.views.SynchronizeView" label="Synchronize"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<page content="org.tigris.subversion.subclipse.ui.repository.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1911" ratioRight="637" relationship="2" relative="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44976452" ratioLeft="1146" ratioRight="1402" relationship="2" relative="top"/>
+<info folder="true" part="top2" ratio="0.7997321" ratioLeft="1194" ratioRight="299" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.tigris.subversion.subclipse.ui.history.HistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4093621b" ratio="0.699933" ratioLeft="1045" ratioRight="448" relationship="4" relative="top">&#x0A;<folder activePageID="org.eclipse.mylyn.tasks.ui.views.repositories" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.mylyn.tasks.ui.views.repositories" label="Task Repositories"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/SplashScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/spaceholdFinal/res/layout/miters.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/MainScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/spaceholdFinal/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/MitersActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/spaceholdFinal/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/MainScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/spaceholdFinal/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/SplashScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/MitersActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/ExpandableList1.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/spaceholdFinal/res/layout/splash.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/spaceholdFinal/res/layout/miters.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/SplashScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spaceholdFinal/src/com/a/space/MainScreenActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/spaceholdFinal/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/client/ConversationWidgetEnsemble.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/conversation/ChatMessage.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/main/Client.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/client/ChatClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/conversation/RoomNotification.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/guichat-starting/src/conversation/ChatMessage.java"/>
 </editors>
-<item historyLabel="MainScreenActivity.java" index="2">
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7646" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7371" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6699" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6699" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7358" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7358" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6690" y="7"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6689" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6720" y="4"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7700" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7701" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7707" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7297" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7297" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7160" y="0"/>
+</item>
+<item historyLabel="ChatMessage.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7160" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6834" y="7"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7077" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7295" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7270" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7294" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="7297" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
 <position/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="4319" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="2979" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6776" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6779" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="6467" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="6957" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3906" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="8152" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3966" y="0"/>
 </item>
-<item historyLabel="spaceholdFinal Manifest" index="3"/>
-<item historyLabel="SplashScreenActivity.java" index="0">
-<position info="not_deleted" x="1029" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3953" y="0"/>
 </item>
-<item historyLabel="spaceholdFinal Manifest" index="3"/>
-<item historyLabel="SplashScreenActivity.java" index="0">
-<position info="not_deleted" x="1029" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3975" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="8152" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3955" y="5"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="7142" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3457" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="9620" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3500" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="10124" y="0"/>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="3541" y="0"/>
 </item>
-<item historyLabel="MitersActivity.java" index="4">
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="5542" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="5543" y="0"/>
+</item>
+<item historyLabel="ConversationWidgetEnsemble.java" index="0">
+<position info="not_deleted" x="5548" y="0"/>
+</item>
+<item historyLabel="Client.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="miters.xml" index="1"/>
-<item historyLabel="MainScreenActivity.java" index="2">
-<position info="not_deleted" x="10896" y="0"/>
+<item historyLabel="ChatClient.java" index="3">
+<position info="not_deleted" x="6245" y="14"/>
 </item>
-<item historyLabel="spaceholdFinal Manifest" index="5">
-<position info="not_deleted" x="474" y="0"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="10896" y="0"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="7"/>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="7"/>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="7"/>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="7"/>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="7">
+<item historyLabel="RoomNotification.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="1897" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="8">
+<item active="true" historyLabel="ChatMessage.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="329" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MitersActivity.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="6">
-<position info="not_deleted" x="155" y="0"/>
-</item>
-<item historyLabel="ExpandableList1.java" index="10">
-<position info="not_deleted" x="1236" y="0"/>
-</item>
-<item historyLabel="splash.xml" index="11"/>
-<item historyLabel="miters.xml" index="12"/>
-<item historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="24" y="132"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="222" y="0"/>
-</item>
-<item historyLabel="MainScreenActivity.java" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="222" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="351" y="0"/>
-</item>
-<item historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="816" y="0"/>
-</item>
-<item historyLabel="spaceholdFinal Manifest" index="15"/>
-<item active="true" historyLabel="SplashScreenActivity.java" index="13">
-<position info="not_deleted" x="816" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -450,6 +538,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChatMessage.java" tooltip="guichat-starting/src/conversation/ChatMessage.java">
+<persistable path="/guichat-starting/src/conversation/ChatMessage.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoomNotification.java" tooltip="guichat-starting/src/conversation/RoomNotification.java">
+<persistable path="/guichat-starting/src/conversation/RoomNotification.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserRoomNotification.java" tooltip="guichat-starting/src/conversation/UserRoomNotification.java">
+<persistable path="/guichat-starting/src/conversation/UserRoomNotification.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChatClientSplashScreen.java" tooltip="guichat-starting/src/client/ChatClientSplashScreen.java">
+<persistable path="/guichat-starting/src/client/ChatClientSplashScreen.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConversationObject.java" tooltip="guichat-starting/src/conversation/ConversationObject.java">
+<persistable path="/guichat-starting/src/conversation/ConversationObject.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConversationWidgetEnsemble.java" tooltip="guichat-starting/src/client/ConversationWidgetEnsemble.java">
+<persistable path="/guichat-starting/src/client/ConversationWidgetEnsemble.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChatClient.java" tooltip="guichat-starting/src/client/ChatClient.java">
+<persistable path="/guichat-starting/src/client/ChatClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="guichat-starting/src/main/Client.java">
+<persistable path="/guichat-starting/src/main/Client.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="spaceholdFinal/AndroidManifest.xml">
 <persistable path="/spaceholdFinal/AndroidManifest.xml"/>
 </file>
@@ -467,9 +579,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MitersActivity.java" tooltip="spaceholdFinal/src/com/a/space/MitersActivity.java">
 <persistable path="/spaceholdFinal/src/com/a/space/MitersActivity.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="splash.xml" tooltip="spaceholdFinal/res/layout/splash.xml">
-<persistable path="/spaceholdFinal/res/layout/splash.xml"/>
 </file>
 </mruList>
 </workbench>
